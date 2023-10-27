@@ -6,7 +6,7 @@ from contact import models
 class ContactAdmin(admin.ModelAdmin):
     # CAMPOS A SEREM MOSTRADOS PARA ORDENAÇÃO NO ADM
     list_display = (
-        'id', 'first_name','last_name','phone',
+        'id', 'first_name','last_name','phone', 'category',
     )
     
     # ORDENAÇÃO PADRÃO
@@ -39,4 +39,15 @@ class ContactAdmin(admin.ModelAdmin):
     list_display_links = (
         'id',
         #'first_name',
+    )
+
+@admin.register(models.Category)
+class CaregoryAdmin(admin.ModelAdmin):
+    # CAMPOS A SEREM MOSTRADOS PARA ORDENAÇÃO NO ADM
+    list_display = (
+        'name',
+    )
+
+    ordering = (
+        '-id',
     )
