@@ -1,0 +1,13 @@
+{
+    "workbench.startupEditor": "none",
+    "editor.fontSize": 14, // tamanho da fonte
+    "explorer.compactFolders": false, // exibição compacta das pastas do projeto
+    "code-runner.runInTerminal": true, // roda o CodeRunner no Terminal
+    "code-runner.clearPreviousOutput": true, // Limpa a última execução
+    "code-runner.executorMap": {
+        "python": "clear; python3 -u",
+    }, // comando para executar python com comandos personalizados
+    "code-runner.ignoreSelection": true,
+    "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
+    "workbench.iconTheme": "material-icon-theme"
+}
