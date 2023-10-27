@@ -5,7 +5,7 @@
     "code-runner.runInTerminal": true, // roda o CodeRunner no Terminal
     "code-runner.clearPreviousOutput": true, // Limpa a última execução
     "code-runner.executorMap": {
-        "python": "clear; python3 -u",
+        "python": "clear; python -u",
     }, // comando para executar python com comandos personalizados
     "code-runner.ignoreSelection": true,
     "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
