@@ -1,13 +1,34 @@
 {
     "workbench.startupEditor": "none",
-    "editor.fontSize": 14, // tamanho da fonte
+    "editor.fontSize": 13, // tamanho da fonte
+    "editor.hover.enabled": true,
+    "terminal.integrated.fontSize": 14,
+    "editor.rulers": [80, 120],
     "explorer.compactFolders": false, // exibição compacta das pastas do projeto
     "code-runner.runInTerminal": true, // roda o CodeRunner no Terminal
     "code-runner.clearPreviousOutput": true, // Limpa a última execução
     "code-runner.executorMap": {
-        "python": "clear; python -u",
+        "python": "clear ; python -u"
     }, // comando para executar python com comandos personalizados
     "code-runner.ignoreSelection": true,
     "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'Fira Code', Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+    "terminal.integrated.fontFamily": "",
+    "editor.fontLigatures": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": true,
+          "source.fixAll.unusedImports": true,
+          "source.organizeImports": true
+        }
+    },
+    "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "./venv/bin/python",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider": "none"
 }
