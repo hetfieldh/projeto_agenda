@@ -10,24 +10,20 @@ from . import models
 
 
 class ContactForm(forms.ModelForm):
+    picture = forms.ImageField(
+        widget=forms.FileInput(
+            attrs={
+                'accept': 'image/*'
+            }
+        )
+    )
+
     # quais campos deverão aparecer no formulário
     class Meta:
         model = models.Contact
         fields = (
-            'first_name', 'last_name', 'phone', 'email', 'description', 'category'
+            'first_name', 'last_name', 'phone', 'email', 'description', 'category', 'picture',
         )
-
-    # Inserir as configurações de cada campo aqui
-    first_name = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                'class': 'classe-a classe-b',
-                'placeholder': 'Digite aqui seu nome'
-            }
-        ),
-        label='Primeiro Nome',
-        help_text='Texto de ajuda para seu usuário',
-    )
 
     # método para validar todos os campos, combinados
     def clean(self):

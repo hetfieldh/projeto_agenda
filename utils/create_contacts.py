@@ -8,25 +8,26 @@ from random import choice
 import django
 from django.conf import settings
 
-DJANGO_BASE_DIR = Path(__file__).parent.parent # para forçar o python a importar de diretórios anteriores
-NUMBER_OF_OBJECTS = 2000 # número de objetos que serão gerados
+# para forçar o python a importar de diretórios anteriores
+DJANGO_BASE_DIR = Path(__file__).parent.parent
+NUMBER_OF_OBJECTS = 2000  # número de objetos que serão gerados
 
 sys.path.append(str(DJANGO_BASE_DIR))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings'
-settings.USE_TZ = False # descarta a configuração do TimeZone
+settings.USE_TZ = False  # descarta a configuração do TimeZone
 
 django.setup()
 
 if __name__ == '__main__':
-    import faker # gera dados aleatórios no Python
+    import faker  # gera dados aleatórios no Python
 
-    from contact.models import Category, Contact # importa os modelos
+    from contact.models import Category, Contact  # importa os modelos
 
     # APAGA TODOS OS DADOS JÁ CRIADOS
-    # Contact.objects.all().delete()
-    # Category.objects.all().delete()
+    Contact.objects.all().delete()
+    Category.objects.all().delete()
 
-    fake = faker.Faker('pt_BR') # utiliza dados de PT-BR
+    fake = faker.Faker('pt_BR')  # utiliza dados de PT-BR
     categories = ['Amigos', 'Família', 'Conhecidos']
 
     django_categories = [Category(name=name) for name in categories]
