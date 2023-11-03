@@ -1,5 +1,6 @@
 :root {
-  --spacing: 1.5rem;
+  --spacing: 0.2rem;
+  --spacing_text: 1.3rem;
   --link-dark-color: rgb(0, 83, 134);
   --link-light-color: rgb(156, 217, 255);
   --clr-white: rgb(245, 245, 255);
@@ -11,12 +12,12 @@
   --clr-light-shadow-5: rgba(200, 200, 255, 5%);
   --clr-light-shadow-10: rgba(200, 200, 255, 10%);
   --clr-light-shadow-20: rgba(200, 200, 255, 20%);
-  --main-page-width: 120rem;
+  --main-page-width: 150rem;
   --table-min-width: 60rem;
-  --biggest-font-size: 5rem;
-  --bigger-font-size: 4rem;
-  --big-font-size: 3.2rem;
-  --medium-font-size: 2.4rem;
+  --biggest-font-size: 4rem;
+  --bigger-font-size: 3rem;
+  --big-font-size: 2.8rem;
+  --medium-font-size: 2.2rem;
   --small-font-size: 1.6rem;
   --smaller-font-size: 1.4rem;
   --smallest-font-size: 1.2rem;
@@ -90,7 +91,7 @@ svg {
 
 .menu-link {
   display: block;
-  padding: var(--spacing);
+  padding: var(--spacing_text);
   color: var(--link-light-color);
   text-decoration: none;
   transition: background-color var(--transition-fast) ease-in-out;
@@ -177,7 +178,7 @@ svg {
 }
 
 .pagination {
-  margin-top: var(--spacing);
+  margin-top: var(--spacing_text);
   display: flex;
   justify-content: center;
   padding: calc(var(--spacing) * 0.8);
@@ -186,7 +187,7 @@ svg {
 
 .pagination .step-links {
   display: flex;
-  gap: calc(var(--spacing) * 0.8);
+  gap: var(--spacing_text);
 }
 
 .pagination .step-links a {
@@ -202,10 +203,10 @@ svg {
 }
 
 .search-input {
-  font-size: var(--medium-font-size);
-  padding: 1rem 2rem;
+  font-size: var(--smaller-font-size);
+  padding: 0.4rem 1rem;
   width: 100%;
-  max-width: 32rem;
+  max-width: 40rem;
   border-radius: var(--default-border-radius);
   border: 1px solid var(--link-light-color);
 }
@@ -216,7 +217,7 @@ svg {
 
 .message {
   max-width: 600px;
-  margin: var(--spacing) auto;
+  margin: var(--spacing_text) auto;
   margin-top: calc(var(--spacing) * 2);
   padding: var(--spacing);
   text-align: center;
@@ -246,11 +247,11 @@ svg {
 
 .form-wrapper {
   max-width: 60rem;
-  margin: var(--spacing) auto;
+  margin: var(--spacing_text) auto;
 }
 
 .form-content {
-  margin: var(--spacing) 0;
+  margin: var(--spacing_text) 0;
 }
 
 .form-group {
@@ -322,7 +323,7 @@ svg {
   margin-block: calc(var(--small-font-size) * 2);
   display: flex;
   align-items: center;
-  gap: 0 var(--spacing);
+  gap: 0 var(--spacing_text);
 }
 
 .btn-link {

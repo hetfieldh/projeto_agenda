@@ -9,7 +9,7 @@ def index(request):
         .filter(show=True)\
         .order_by('-id')
 
-    paginator = Paginator(contacts, 10)
+    paginator = Paginator(contacts, 20)
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
 
