@@ -9,6 +9,7 @@ from . import models
 
 class ContactForm(forms.ModelForm):
     picture = forms.ImageField(
+        label='Imagem',
         widget=forms.FileInput(
             attrs={
                 'accept': 'image/*',
@@ -58,10 +59,12 @@ class ContactForm(forms.ModelForm):
 
 class RegisterForm(UserCreationForm):
     first_name = forms.CharField(
+        label='Nome',
         required=True,
         min_length=3,
     )
     last_name = forms.CharField(
+        label='Sobrenome',
         required=True,
         min_length=3,
     )
@@ -88,6 +91,7 @@ class RegisterForm(UserCreationForm):
 
 class RegisterUpdateForm(forms.ModelForm):
     first_name = forms.CharField(
+        label='Nome',
         min_length=2,
         max_length=30,
         required=True,
@@ -97,6 +101,7 @@ class RegisterUpdateForm(forms.ModelForm):
         }
     )
     last_name = forms.CharField(
+        label='Sobrenome',
         min_length=2,
         max_length=30,
         required=True,
@@ -104,7 +109,7 @@ class RegisterUpdateForm(forms.ModelForm):
     )
 
     password1 = forms.CharField(
-        label="Password",
+        label="Senha",
         strip=False,
         widget=forms.PasswordInput(attrs={"autocomplete": "new-password"}),
         help_text=password_validation.password_validators_help_text_html(),
@@ -112,7 +117,7 @@ class RegisterUpdateForm(forms.ModelForm):
     )
 
     password2 = forms.CharField(
-        label="Password 2",
+        label="Confirmação de Senha",
         strip=False,
         widget=forms.PasswordInput(attrs={"autocomplete": "new-password"}),
         help_text='Use the same password as before.',

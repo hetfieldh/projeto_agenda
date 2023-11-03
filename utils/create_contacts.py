@@ -10,7 +10,7 @@ from django.conf import settings
 
 # para forçar o python a importar de diretórios anteriores
 DJANGO_BASE_DIR = Path(__file__).parent.parent
-NUMBER_OF_OBJECTS = 2000  # número de objetos que serão gerados
+NUMBER_OF_OBJECTS = 4000  # número de objetos que serão gerados
 
 sys.path.append(str(DJANGO_BASE_DIR))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings'

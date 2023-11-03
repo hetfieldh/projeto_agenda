@@ -9,22 +9,22 @@
 
         {% if user.is_authenticated %}
           <li class="menu-item">
-            <a href="{% url "contact:create" %}" class="menu-link">New Contact</a>
+            <a href="{% url "contact:create" %}" class="menu-link">Novo</a>
           </li>
           <li class="menu-item">
-            <a href="{% url "contact:user_update" %}" class="menu-link">Profile</a>
+            <a href="{% url "contact:user_update" %}" class="menu-link">Perfil</a>
           </li>
           <li class="menu-item">
-            <a href="{% url "contact:logout" %}" class="menu-link">Logout</a>
+            <a href="{% url "contact:logout" %}" class="menu-link">Sair</a>
           </li>
 
         {% else %}
 
           <li class="menu-item">
-            <a href="{% url "contact:login" %}" class="menu-link">Login</a>
+            <a href="{% url "contact:login" %}" class="menu-link">Entrar</a>
           </li>
           <li class="menu-item">
-            <a href="{% url "contact:register" %}" class="menu-link">Regsiter</a>
+            <a href="{% url "contact:register" %}" class="menu-link">Registrar</a>
           </li>
 
         {% endif %}
@@ -39,7 +39,7 @@
         <input 
           type="text" 
           class="search-input" 
-          placeholder="Search" 
+          placeholder="Localizar" 
           id="search" 
           name="q"
           value="{{ request.GET.q.strip }}"
